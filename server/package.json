@@ -1,0 +1,45 @@
+{
+  "scripts": {
+    "migrate": "ts-node ./graphql/db.ts",
+    "start": "ts-node app.ts",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "\\.test\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "globals": {
+      "ts-jest": {
+        "enableTsDiagnostics": true
+      }
+    }
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.7",
+    "graphql-tools": "^4.0.5",
+    "graphql-yoga": "^1.18.3",
+    "mysql": "^2.17.1",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.19.0",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.27",
+    "@types/graphql": "^14.5.0",
+    "@types/jest": "^24.0.18",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.5",
+    "@types/sequelize": "^4.28.4",
+    "@types/validator": "^10.11.3",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
+  }
+}

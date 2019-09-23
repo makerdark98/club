@@ -1,0 +1,6 @@
+type Hello {
+  id: Int!
+  name: String!
+  score: Int!
+}
+

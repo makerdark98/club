@@ -1,0 +1,57 @@
+import React from 'react';
+import './App.css';
+import { MainContent, Navbar, Sidebar } from './components';
+import { Properties } from "csstype";
+import { Menu, MenuItem } from './components/Model';
+
+interface LayoutStyle {
+    main: Properties,
+    navbar: Properties,
+    sidebar: Properties,
+};
+
+const layoutStyle : LayoutStyle = {
+    main: {
+        display: "block"
+    },
+    navbar: {
+        display: "flex"
+    },
+    sidebar: {
+        display: "flex"
+    }
+};
+
+let menu: Menu;
+menu = [
+    new MenuItem({
+        title: "Main Item",
+        href: "#"
+    }),
+
+    new MenuItem({
+        title: "Test Item1",
+        href: "#"
+    }),
+    new MenuItem({
+        title: "Test Item2",
+        href: "#"
+    })
+];
+
+const App: React.FC = () => {
+  return (
+    <div style={layoutStyle.main} className="Main">
+      <header className="Main-header">
+        <Navbar menu={menu}/>
+      </header>
+      <div style={{display:"flex"}}>
+        <Sidebar menu={menu}/>
+        <MainContent/>
+      </div>
+      <footer className="Main-Footer" />
+    </div>
+  );
+};
+
+export default App;
